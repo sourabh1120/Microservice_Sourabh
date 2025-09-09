@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   datasource:
@@ -7,10 +7,8 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   application:
-    name: HOTEL-SERVICE
-
+    name: RATING-SERVICE
   jpa:
     hibernate:
       ddl-auto: update

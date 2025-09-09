@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
         @ExceptionHandler(ResourceNotFoundException.class)
-        public ResponseEntity<> handlerResourceNotFoundException(ResourceNotFoundException ex){
+        public ResponseEntity<ApiResponse> handlerResourceNotFoundException(ResourceNotFoundException ex){
 
            String message = ex.getMessage();
             ApiResponse response = ApiResponse.builder()
