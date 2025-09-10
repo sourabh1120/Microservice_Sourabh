@@ -11,6 +11,9 @@ spring:
   application:
     name: HOTEL-SERVICE
 
+  config:
+    import: configserver:http://localhost:8085
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,11 +22,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    server-url:
-      defaultZone: http://localhost:8761/eureka
+#eureka:
+ # instance:
+ #   prefer-ip-address: true
+ # client:
+  #  fetch-registry: true
+   # register-with-eureka: true
+    #server-url:
+     # defaultZone: http://localhost:8761/eureka

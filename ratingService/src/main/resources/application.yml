@@ -17,11 +17,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    server-url:
-      defaultZone: http://localhost:8761/eureka
+  config:
+    import: configserver:http://localhost:8085
+
+#eureka:
+ # instance:
+  #  prefer-ip-address: true
+  #client:
+   # fetch-registry: true
+    #register-with-eureka: true
+    #server-url:
+     # defaultZone: http://localhost:8761/eureka
